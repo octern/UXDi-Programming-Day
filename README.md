@@ -15,9 +15,10 @@
 - Front end frameworks and the grid system.
 
 ##### Tags:
-- Tags allow you to set up your document's structure.
-- Attributes allow you to add additional information to a tag.
-- Attributes also allow you to bridge the gap between HTML and CSS.
+- HTML tags allow you to set up your document's structure.  
+- Attributes allow you to add additional information to a tag.  
+- Attributes also allow you to bridge the gap between HTML and CSS.  
+- "Tags" in HTML code become "elements" on the page.  
 
 ##### Div:
 - Divs are like empty rectangles.
@@ -29,12 +30,21 @@
 </div>
 ```
 
+##### Semantic Elements:
+
+- "Div" is generic.  
+- HTML5 introduced other types of empty rectangles with names that mirror their purposes: header, footer, nav, etc.
+
+![semantic html elements: header, nav, article, section, aside, footer](https://cloud.githubusercontent.com/assets/3254910/12483331/30f9061a-c009-11e5-85e6-43a447431a10.gif)
+
 ##### Input:
-- Inputs allow users to enter data to be saved to a database.
-- They come in different forms to facilitate the specific data entry type.
+- Inputs allow users to enter data.
+- Data is usually then saved to a database.
+- Inputs come in different forms to facilitate the specific data entry type.
 
 ```html
 <input type="text" class="form-control" />
+<input type="password" class="form-control" />
 ```
 
 ##### Select list:
@@ -47,15 +57,24 @@
 ```
 
 ##### Button:
-- Buttons are HTML elements that give users the ability to submit the data entered as well as transition to new pages.
+- Buttons trigger some effect - they might trigger a request to the server or change something on the current page.
 
 ```html
-<button>My Button</button>
+<button>Like this post!</button>
+```
+
+##### Anchor:
+- Anchor tags are used for linking to other sites, other pages on the current site, or other parts of the current page.
+
+```html
+<a href="http://www.google.com">Google Link</a>
+<a href="about.html">Link within this Site</a>
 ```
 
 ## CSS Stylesheets
 - CSS stylesheets provide the look and feel of the website.
 - There are two main ways of referencing CSS in the HTML so you can apply styles - classes and IDs.
+- You can also apply styles to tags, but we try to be as specific as possible when applying styles.
 - Consider this HTML:
 
 ```html
@@ -93,6 +112,24 @@ CSS
 }
 ```
 
+- Or, using the newer header tag:
+
+HTML
+```html
+<header>
+	My Header
+</header>
+```
+
+CSS
+```css
+header {
+	font-size:20px;
+	background-color:blue;
+}
+```
+
+
 > **The main difference between classes and IDs is that classes can be used multiple times in the HTML document whereas IDs should only be used once.**
 
 ##### Linking CSS with HTML
@@ -102,8 +139,18 @@ CSS
 <link rel="stylesheet" href="css/style.css" />
 ```
 
-##### Linking JS with HTML
-- JavaScript enables interaction with the page.
+
+## JavaScript Scripts
+
+- JavaScript enables more user interaction with the page.
+- JavaScript enables richer client interaction with a server or other services (more on this later!).
+
+##### Key JavaScript Concepts for UX
+
+- "Events" like hover, click, and page load drive most JavaScript behaviors.
+- AJAX allows client-server interaction to happen in the background.
+
+##### Linking JS with HTML  
 - In order to run external JS you need to link it to the HTML. This usually goes before the closing `body` tag:
 
 ```html
@@ -159,8 +206,8 @@ div {
 
 ## CSS Color Lab
 - Create three divs via Codepen with a width, height, and border.
-- Style them all differently via classes or ids (your choice) by giving them varying colors using a different method each time.
-- Make sure one uses a gradient.
+- Style them all differently via classes or ids (your choice) by giving them varying colors or background colors, using a different method each time.
+- Add a gradient to at least one of the divs.
 
 ## Putting it Together
 - For this lab we will be creating a personal landing page using HTML and CSS.
@@ -169,24 +216,25 @@ div {
 	- Add the class "fixed-top" to the header to make it stay in place during scroll.
 	- Use rgba colors to make the header navbar semi-transparent.
 	- Use Google Fonts to implement a font of your choice for the logo.
-	- Replace the picture of me with one of you :) You will need to look up the <img> tag to make this happen.
+	- Replace the picture of Arun with one of you. You will need to look up the <img> tag to make this happen.
 	- Replace the picture of the motorcycle with a background of your choice (Hint: Have a look at the CSS to find out where this background comes from).
 	- Make the background of the banner have a parallax effect. Hint: Research the "background-attachment" property in CSS.
 	- Change the text throughout the page to reflect your own personal information.
 	- Add a gradient to the background of the user-info-text class in CSS.
 	- **Bonus:** Implement a small animation using CSS somewhere on the page. You may want to research the `transition` and `transform` CSS properties.
-- We will be discussing how to make this web page live using a service called BitBalloon.
+- We will be discussing how to make this web page live using a service called BitBaloon.
 
 ## Overview of Back End Development
 
 ##### Introduction
-- Why is a back end language needed?
-- How do back end languages interact with the front end?
+- Why is a back end needed?
+- How does the back end interact with the front end? 
+- APIs and services.
 - Back end language examples:
-	- Ruby on Rails
+	- Ruby (Ruby on Rails)
 	- PHP
-	- Python
-	- NodeJS
+	- Python (Django)
+	- JavaScript (NodeJS)
 
 ##### Databases
 - Difference between SQL and NoSQL databases.
@@ -200,6 +248,7 @@ div {
 Let's look at some popular sites and determine what technologies could be used. Think about the interaction between backend and frontend and how they fit together.
 
 Your answer doesn't have to be the "right" one (the technology they actually use), but we just want you to demonstrate you understand how each piece fits together. You can choose your own site to analyze, but here are some examples:
+
 - Twitter
 - Facebook
 - Instagram
