@@ -1,5 +1,5 @@
 # UXDi Programming Day
-hi
+
 ## Share Out
 - What is programming and why should I care?
 - Should I learn programming or should I hire someone else to do it?
@@ -78,7 +78,7 @@ hi
 - Consider this HTML:
 
 ```html
-<div class="header">
+<div class="main-title">
 	My Header
 </div>
 ```
@@ -87,7 +87,7 @@ hi
 - Here is how we would reference this class in the stylesheet:
 
 ```css
-.header {
+.main-title {
 	font-size:20px;
 	background-color:blue;
 }
@@ -98,7 +98,7 @@ hi
 HTML
 
 ```html
-<div id="header">
+<div id="main-title">
 	My Header
 </div>
 ```
@@ -106,7 +106,7 @@ HTML
 CSS
 
 ```css
-#header {
+#main-title {
 	font-size:20px;
 	background-color:blue;
 }
