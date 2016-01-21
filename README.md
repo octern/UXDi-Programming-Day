@@ -1,5 +1,5 @@
 # UXDi Programming Day
-
+hi
 ## Share Out
 - What is programming and why should I care?
 - Should I learn programming or should I hire someone else to do it?
